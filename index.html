@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 Sahabat</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #9face6);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #333;
+    }
+    h1 {
+      margin: 20px 0;
+      font-size: 2.5em;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+    .card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 5px solid #74ebd5;
+      margin-bottom: 15px;
+      animation: rotate 3s infinite linear;
+    }
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    .card h2 {
+      margin: 10px 0;
+      color: #333;
+      font-size: 1.5em;
+    }
+    .card p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #666;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #74ebd5;
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .card a:hover {
+      background: #5cbdd5;
+    }
+    footer {
+      margin-top: 30px;
+      color: #fff;
+      font-size: 0.9em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>3 Sahabat: Aji, Bisma, & Meibyon</h1>
+  <div class="container">
+    <!-- Card Aji -->
+    <div class="card">
+      <img src="https://via.placeholder.com/120" alt="Aji's Profile Picture">
+      <h2>Aji</h2>
+      <p>Keahlian: Pemrograman Web</p>
+      <p>Telepon: 081234567890</p>
+      <a href="tel:081234567890">Hubungi</a>
+    </div>
+    <!-- Card Bisma -->
+    <div class="card">
+      <img src="https://via.placeholder.com/120" alt="Bisma's Profile Picture">
+      <h2>Bisma</h2>
+      <p>Keahlian: Desain Grafis</p>
+      <p>Telepon: 081987654321</p>
+      <a href="tel:081987654321">Hubungi</a>
+    </div>
+    <!-- Card Meibyon -->
+    <div class="card">
+      <img src="https://via.placeholder.com/120" alt="Meibyon's Profile Picture">
+      <h2>Meibyon</h2>
+      <p>Keahlian: Animasi</p>
+      <p>Telepon: 081345678912</p>
+      <a href="tel:081345678912">Hubungi</a>
+    </div>
+  </div>
+  <footer>
+    <p>© 2024 3 Sahabat. All rights reserved.</p>
+  </footer>
+</body>
+</html>
