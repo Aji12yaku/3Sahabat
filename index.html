@@ -1,124 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3 Sahabat</title>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #74ebd5, #9face6);
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: #333;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bakso Byon - Cerita Seru</title>
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background: #121212;
+    color: #e0dede;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2.5rem;
+  }
+  main {
+    background: #1e1e1e;
+    max-width: 700px;
+    padding: 2.8rem 3.2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #2f2f2f;
+    transition: box-shadow 0.3s ease;
+  }
+  main:hover {
+    box-shadow: 0 12px 35px rgba(255, 99, 71, 0.6);
+  }
+  h1 {
+    font-size: 3.1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #ff7043;
+    letter-spacing: 0.07em;
+    text-shadow: 0 0 10px #ff704380;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 0;
+    text-align: center;
+    color: #ff9a6b;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+    text-shadow: 0 0 5px #ff9a6b88;
+  }
+  p {
+    font-size: 1.18rem;
+    margin-bottom: 1.7rem;
+    color: #d9d4d4;
+  }
+  p span.highlight {
+    color: #ffb38f;
+    font-weight: 600;
+    cursor: default;
+    transition: color 0.3s ease;
+  }
+  p span.highlight:hover {
+    color: #ffc8a8;
+  }
+  /* Strong & emphasis accents */
+  p strong {
+    color: #ff8a4c;
+  }
+  p em {
+    color: #ff9966;
+  }
+  /* Underlined glow effect for important words */
+  .glow-underline {
+    position: relative;
+    color: #ff7f50;
+    font-weight: 600;
+    cursor: default;
+    transition: color 0.4s ease;
+  }
+  .glow-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #ff7f50cc;
+    bottom: -5px;
+    left: 0;
+    border-radius: 2px;
+    filter: blur(3px);
+    transition: background-color 0.4s ease;
+  }
+  .glow-underline:hover {
+    color: #ffa07a;
+  }
+  .glow-underline:hover::after {
+    background-color: #ffb07acc;
+  }
+  /* Footer style */
+  footer {
+    margin-top: 3.5rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #a65a40cc;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    user-select: none;
+  }
+  @media (max-width: 480px) {
+    main {
+      padding: 2rem 2rem;
     }
     h1 {
-      margin: 20px 0;
-      font-size: 2.5em;
-      color: #ffffff;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      font-size: 2.4rem;
     }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      padding: 20px;
+    h2 {
+      font-size: 1.1rem;
+      margin-bottom: 1.8rem;
     }
-    .card {
-      background: #ffffff;
-      border-radius: 15px;
-      padding: 20px;
-      width: 280px;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      text-align: center;
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-    }
-    .card img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 5px solid #74ebd5;
-      margin-bottom: 15px;
-      animation: rotate 3s infinite linear;
-    }
-    @keyframes rotate {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-    .card h2 {
-      margin: 10px 0;
-      color: #333;
-      font-size: 1.5em;
-    }
-    .card p {
-      margin: 5px 0;
-      font-size: 14px;
-      color: #666;
-    }
-    .card a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: #74ebd5;
-      color: #ffffff;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-    .card a:hover {
-      background: #5cbdd5;
+    p {
+      font-size: 1rem;
+      margin-bottom: 1.3rem;
     }
     footer {
-      margin-top: 30px;
-      color: #fff;
-      font-size: 0.9em;
-      text-align: center;
+      font-size: 0.95rem;
     }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <h1>3 Sahabat: Aji, Bisma, & Meibyon</h1>
-  <div class="container">
-    <!-- Card Aji -->
-    <div class="card">
-      <img src="https://via.placeholder.com/120" alt="Aji's Profile Picture">
-      <h2>Aji</h2>
-      <p>Keahlian: Pemrograman Web</p>
-      <p>Telepon: 081234567890</p>
-      <a href="tel:081234567890">Hubungi</a>
-    </div>
-    <!-- Card Bisma -->
-    <div class="card">
-      <img src="https://via.placeholder.com/120" alt="Bisma's Profile Picture">
-      <h2>Bisma</h2>
-      <p>Keahlian: Desain Grafis</p>
-      <p>Telepon: 081987654321</p>
-      <a href="tel:081987654321">Hubungi</a>
-    </div>
-    <!-- Card Meibyon -->
-    <div class="card">
-      <img src="https://via.placeholder.com/120" alt="Meibyon's Profile Picture">
-      <h2>Meibyon</h2>
-      <p>Keahlian: Animasi</p>
-      <p>Telepon: 081345678912</p>
-      <a href="tel:081345678912">Hubungi</a>
-    </div>
-  </div>
-  <footer>
-    <p>© 2024 3 Sahabat. All rights reserved.</p>
-  </footer>
+<main>
+  <h1>Bakso Byon</h1>
+  <h2><em>Pedasnya Bikin Nangis!</em></h2>
+  <p>Byon membuka gerobak bakso kecil di dekat <span class="glow-underline">hutan belakang rumah</span>. Ia menaruh papan bertuliskan <span class="highlight">"Bakso Byon - Pedasnya Bikin Nangis!"</span></p>
+  <p>Hari pertama sepi. Tapi menjelang maghrib, angin tiba-tiba dingin. Seekor <strong>ular besar</strong> datang melata. Ia berhenti dan berkata, <em>"Satu mangkok bakso pedas ya, Bang..."</em></p>
+  <p>Byon terkejut, tapi tetap melayani. <span class="glow-underline">"Pakai cuka, Bang?"</span></p>
+  <p><em>"Iya, dua sendok,"</em> jawab si ular sambil menjulurkan lidahnya.</p>
+  <p>Tak lama kemudian, bayangan hitam berdatangan—<strong>makhluk gaib bermata merah</strong>, ada yang kepala kuda, ada yang kakinya tak menyentuh tanah. Mereka duduk rapi di bangku, antre sambil memesan.</p>
+  <p><em>"Aku mau bakso isi api,"</em> kata salah satunya.</p>
+  <p>Byon berkeringat dingin tapi tetap tersenyum. <span class="glow-underline">"Siap, sebentar ya!"</span></p>
+  <p>Anehnya, makhluk-makhluk itu sopan dan bayar pakai <span class="highlight">koin emas</span>. Sejak itu, warung bakso Byon ramai tiap malam. Tapi katanya, cuma bisa dilihat kalau hatimu berani dan lidahmu tahan pedas.</p>
+</main>
+<footer>pembuat web ©Aeny</footer>
 </body>
 </html>
